@@ -1,0 +1,13 @@
+<%= link_to "Home", "/" %>
+
+<p>
+    <%= form_for @user, :url => users_path, :html => { :multipart => true } do |form| %>
+        <%= form.label "First Name" %>
+        <%= form.text_field :fname %>
+        <%= form.label "Last Name" %>
+        <%= form.text_field :lname %>
+        <%= form.label :avatar %>
+        <%= form.file_field :avatar %>
+        <%= form.submit "Submit" %>
+    <% end %>
+</p>

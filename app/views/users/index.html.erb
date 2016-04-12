@@ -1,0 +1,11 @@
+<h1>Users</h1>
+	<% @users.each do |f| %>
+		<div>
+			<ul>
+				<li><%= f.fname %></li>
+				<li><%= f.lname %></li>
+			<ul>
+			<p><%= image_tag f.avatar.url %></p>
+			<p><%= link_to "Add avatar", edit_user_path(f.id) %></p>
+		</div>
+	<% end %>
